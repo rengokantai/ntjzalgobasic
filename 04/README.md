@@ -1,7 +1,7 @@
 TreeLevelTraversal.java
 ```
 public List<List<Integer>> getResult(TreeNode root){
-  ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+  List<List<Integer>> result = new ArrayList<>();
   if(root==null)
     return result;
 
@@ -9,7 +9,7 @@ public List<List<Integer>> getResult(TreeNode root){
   queue.offer(root);
   
   while(!queue.isEmpty()){
-    ArrayList<Integer> temp = new ArrayList<>()
+    List<Integer> temp = new ArrayList<>()
     int size = queue.size()
     for(int i=0;i<size;i++){
       TreeNode i = queue.poll();
@@ -19,5 +19,6 @@ public List<List<Integer>> getResult(TreeNode root){
     }
     result.add(temp);
   }
+  return result;
 }
 ```
